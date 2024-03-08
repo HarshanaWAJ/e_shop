@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:e_shop/pages/common/login._screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:lottie/lottie.dart';
@@ -11,6 +14,19 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 5),
+      () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => LoginScreen(),
+        ),
+      ),
+    );
+  }
+
   Widget build(BuildContext context) {
     return Material(
       child: Container(
