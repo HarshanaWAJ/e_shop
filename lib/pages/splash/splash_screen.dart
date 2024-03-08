@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:e_shop/pages/common/login._screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 5),
+      Duration(seconds: 4),
       () => Navigator.push(
         context,
         MaterialPageRoute(
