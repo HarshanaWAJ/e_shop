@@ -1,11 +1,17 @@
+import 'package:e_shop/pages/components/buttons.dart';
+import 'package:e_shop/pages/components/squre_tile.dart';
 import 'package:e_shop/pages/components/text_field.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+
+  void signUserIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +37,10 @@ class LoginScreen extends StatelessWidget {
               ),
               Image.asset(
                 "assets/images/black_logo.png",
-                width: 100.0,
+                width: 80.0,
               ),
               SizedBox(
-                height: 30.0,
+                height: 20.0,
               ),
               Text(
                 "Welcome back... ! ",
@@ -56,13 +62,87 @@ class LoginScreen extends StatelessWidget {
                 obsecureText: false,
               ),
               SizedBox(
-                height: 30.0,
+                height: 15.0,
               ),
               MyTextFeild(
                 controller: passwordController,
                 hintText: "Password",
                 obsecureText: true,
-              )
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "Forgot Password",
+                      style: TextStyle(fontSize: 15.0),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              MyButton(
+                onTap: signUserIn,
+              ),
+              SizedBox(
+                height: 15.0,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        thickness: 1.5,
+                        color: Color.fromARGB(255, 250, 82, 16),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 15.0),
+                      child: Text(
+                        "Or continue with",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          fontFamily: 'Times new roman',
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        thickness: 1.5,
+                        color: Color.fromARGB(255, 250, 82, 16),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [MySquareTile(cardImg: 'assets/images/google.png')],
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Not a User,"),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text("Register Now")
+                ],
+              ),
             ],
           ),
         ),
