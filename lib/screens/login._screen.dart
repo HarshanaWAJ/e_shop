@@ -3,7 +3,6 @@ import 'package:e_shop/components/squre_tile.dart';
 import 'package:e_shop/components/text_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
