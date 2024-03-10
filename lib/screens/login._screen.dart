@@ -1,15 +1,27 @@
 import 'package:e_shop/components/buttons.dart';
 import 'package:e_shop/components/squre_tile.dart';
 import 'package:e_shop/components/text_field.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
-  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  void signUserIn() {}
+//Sign In method
+  void signUserIn() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'invalid-email') {}
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,14 +66,18 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 height: 30.0,
               ),
+
+              //Email
               MyTextFeild(
-                controller: usernameController,
+                controller: emailController,
                 hintText: "Email Address",
                 obsecureText: false,
               ),
               SizedBox(
                 height: 15.0,
               ),
+
+              //Password
               MyTextFeild(
                 controller: passwordController,
                 hintText: "Password",

@@ -1,6 +1,5 @@
 import 'dart:async';
-
-import 'package:e_shop/screens/login._screen.dart';
+import 'package:e_shop/screens/user_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -20,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => LoginScreen(),
+          builder: (context) => UserAuth(),
         ),
       ),
     );
