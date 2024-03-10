@@ -1,9 +1,7 @@
-import 'package:e_shop/pages/components/buttons.dart';
-import 'package:e_shop/pages/components/squre_tile.dart';
-import 'package:e_shop/pages/components/text_field.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:e_shop/components/buttons.dart';
+import 'package:e_shop/components/squre_tile.dart';
+import 'package:e_shop/components/text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});

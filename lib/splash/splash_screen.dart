@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:e_shop/pages/common/login._screen.dart';
+import 'package:e_shop/screens/login._screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
